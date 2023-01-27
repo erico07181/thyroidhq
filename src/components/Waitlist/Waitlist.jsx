@@ -8,8 +8,58 @@ import {
   Spacer,
 } from "@nextui-org/react";
 import Logo from "../../assets/thq-logo-no_background.svg";
+import React, { useState } from "react";
 
 function Waitlist() {
+  const [userEmail, setUserEmail] = useState("");
+  const [sentEmail, setSentEmail] = useState();
+  const [errors, setErrors] = useState({});
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [form, setForm] = useState({
+    email: "null",
+  });
+
+  const emailRegex = /[^@]+@[^@]+\.[^@]+/;
+
+  function validateEmail(email) {
+    return String(email).toLowerCase().match(emailRegex);
+  }
+
+  const onChange = (event) => {
+    if (event.target?.name === "email") {
+      if (!validateEmail(event.target.value)) {
+        console.log("here");
+        setErrors((e) => ({ ...e, email: "Please enter a valid email." }));
+      } else {
+        setUserEmail(event.target.value);
+        setIsDisabled(false);
+        delete errors.email;
+      }
+    }
+  };
+
+  const handleOnSubmit = async (e) => {
+    fetch(
+      "https://t2ji24x1v8.execute-api.us-east-1.amazonaws.com/default/orderNowSignUp",
+      {
+        mode: "no-cors",
+        method: "POST",
+        header: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          senderEmail: userEmail,
+        }),
+      }
+    ).then(function (response) {
+      console.log(response.status);
+      if (response.status == 0) {
+        setSentEmail(true);
+      }
+    });
+  };
+
   return (
     <Container fluid css={{ maxWidth: "100%" }}>
       <Container
@@ -39,14 +89,23 @@ function Waitlist() {
         </Card.Body>
       </Card>
       <Container fluid>
+        {sentEmail ? "Success! You have signed up :)" : <br></br>}
         <Row justify="center" align="center">
-          <Input width="60%" size="xl" placeholder="Enter your email"></Input>
+          <Input
+            width="60%"
+            size="xl"
+            name="email"
+            placeholder="Enter your email"
+            onChange={onChange}
+          ></Input>
           <Button
             auto
+            onPress={handleOnSubmit}
             css={{
               backgroundColor: "#b65a60",
               height: "3.6vw",
             }}
+            disabled={isDisabled}
           >
             Join Waitlist
           </Button>
