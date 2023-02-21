@@ -21,7 +21,7 @@ export default function MissionStatement() {
           justifyContent: "center",
           alignContent: "center",
           display: "flex",
-          paddingTop: "2vw",
+
           width: "114vh",
         }}
       >
@@ -86,7 +86,7 @@ export default function MissionStatement() {
             paddingTop: "2vh",
           }}
         >
-          <Text h2 css={{ color: "#666666", fontWeight: "400Working" }}>
+          <Text h2 css={{ color: "#666666", fontWeight: "400" }}>
             Our mission is to make living with hypothyroidism easier.
           </Text>
         </Container>
