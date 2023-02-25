@@ -1,17 +1,15 @@
-import { useState } from "react";
 import "./App.css";
-import Waitlist from "../Waitlist/Waitlist";
-import ContactUs from "../ContactUs/ContactUs";
 
-function App() {
-  const [count, setCount] = useState(0);
+import LandingPage from "../LandingPage/LandingPage";
 
+export default function App() {
   return (
     <div className="App">
-      <Waitlist />
-      <ContactUs />
+      {/* <Nav /> */}
+      {/* <MissionStatement />
+      <Vision />
+  <Story /> */}
+      <LandingPage />
     </div>
   );
 }
-
-export default App;

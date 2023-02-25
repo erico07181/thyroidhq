@@ -28,7 +28,6 @@ function Waitlist() {
   const onChange = (event) => {
     if (event.target?.name === "email") {
       if (!validateEmail(event.target.value)) {
-        console.log("here");
         setErrors((e) => ({ ...e, email: "Please enter a valid email." }));
       } else {
         setUserEmail(event.target.value);
