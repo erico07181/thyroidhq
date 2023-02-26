@@ -8,6 +8,7 @@ export default defineConfig({
     rollupOptions: {
       external: [
         /^node:.*/,
+        /^@mui:.*/,
         "@mui/material",
         "@mui/styled-engine",
         "@nextui-org/react",
