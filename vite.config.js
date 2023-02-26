@@ -6,7 +6,15 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: [/^node:.*/],
+      external: [
+        /^node:.*/,
+        "@mui/material",
+        "@mui/styled-engine",
+        "@nextui-org/react",
+        "react",
+        "react-dom",
+        "react-router-dom",
+      ],
     },
   },
 });
