@@ -24,7 +24,6 @@ export default function LandingPage() {
             justifyContent: "center",
             alignContent: "center",
             display: "flex",
-
             width: "114vh",
           }}
         >
@@ -95,6 +94,7 @@ export default function LandingPage() {
           </Container>
         </Container>
       </Container>
+
       <Container
         css={{
           maxWidth: "100%",
@@ -278,6 +278,69 @@ export default function LandingPage() {
               ></Card>
             </Container>
           </Row>
+        </Card>
+      </Container>
+      <Container
+        fluid
+        css={{
+          maxWidth: "100%",
+          justifyContent: "center",
+          alignContent: "center",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Card
+          css={{
+            background: "#FAFAFA",
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+            borderRadius: "5px",
+          }}
+        >
+          <Container
+            css={{
+              maxWidth: "100%",
+              justifyContent: "center",
+              alignContent: "center",
+              display: "flex",
+              width: "114vh",
+            }}
+          >
+            <img
+              src={Logo}
+              style={{
+                display: "flex",
+                paddingTop: "8vw",
+                height: "16vw",
+                width: "25vw",
+              }}
+            />
+          </Container>
+
+          <Container
+            css={{
+              maxWidth: "30%",
+              justifyContent: "center",
+              alignContent: "center",
+              display: "flex",
+              paddingTop: "2vw",
+            }}
+          >
+            <Text
+              h1
+              css={{
+                fontFamily: "Euclid Circular B",
+                fontStyle: "normal",
+                display: "flex",
+                alignItems: "center",
+                textAlign: "center",
+                fontWeight: "700",
+                lineHeight: "81px",
+              }}
+            >
+              Ready to learn more about your thyroid?
+            </Text>
+          </Container>
         </Card>
       </Container>
       <Waitlist />
