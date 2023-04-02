@@ -9,6 +9,7 @@ import {
 } from "@nextui-org/react";
 import Logo from "../../assets/thq-logo-no_background.svg";
 import React, { useState } from "react";
+import { fontFamily } from "@mui/system";
 
 function Waitlist() {
   const [userEmail, setUserEmail] = useState("");
@@ -60,38 +61,41 @@ function Waitlist() {
   };
 
   return (
-    <Container fluid css={{ maxWidth: "100%" }}>
-      <Container
+    <Card
+      css={{
+        boxShadow: "0px 4px 4px rgba(0,0,0,0.25)",
+        backgroundColor: "#FAFAFA",
+        height: "70vh",
+        maxWidth: "100%",
+      }}
+    >
+      <Card.Header
         css={{
-          display: "flex",
+          maxWidth: "100%",
           justifyContent: "center",
           alignContent: "center",
+          display: "flex",
         }}
       >
-        <img src={Logo} width="150vw" style={{ display: "flex" }} />
-      </Container>
-      <Card variant="flat">
-        <Card.Body
+        <Text
+          h1
           css={{
-            backgroundColor: "white",
-            alignContent: "center",
-            justifyContent: "center",
+            fontStyle: "normal",
+            display: "flex",
+            alignItems: "center",
+            textAlign: "center",
+            paddingTop: "10vh",
           }}
         >
-          <Text h1>Get yours today</Text>
-          <Text
-            h2
-            css={{ fontSize: "2.5vw", color: "#666666", maxWidth: "75%" }}
-          >
-            The 1st online platform for minority patients with hypothyroidism{" "}
-          </Text>
-        </Card.Body>
-      </Card>
+          Join Our Mailing Waitlist
+        </Text>
+      </Card.Header>
+
       <Container fluid>
         {sentEmail ? "Success! You have signed up :)" : <br></br>}
         <Row justify="center" align="center">
           <Input
-            width="60%"
+            width="45%"
             size="xl"
             name="email"
             placeholder="Enter your email"
@@ -103,6 +107,7 @@ function Waitlist() {
             css={{
               backgroundColor: "#b65a60",
               height: "3.6vw",
+              width: "20vh",
             }}
             disabled={isDisabled}
           >
@@ -110,7 +115,34 @@ function Waitlist() {
           </Button>
         </Row>
       </Container>
-    </Container>
+      <Container
+        css={{
+          maxWidth: "100%",
+          justifyContent: "center",
+          alignContent: "center",
+          display: "flex",
+          paddingTop: "1vh",
+          flexDirection: "column",
+        }}
+      >
+        <Text css={{ color: "white" }}>HHHH</Text>
+        <Text
+          h2
+          css={{
+            color: "#666666",
+            fontWeight: "400",
+            display: "flex",
+            alignItems: "center",
+            textAlign: "center",
+            maxWidth: "60%",
+          }}
+        >
+          When you join our mailing list, you’ll get first access to special
+          sales, exciting product updates, and thyroid-function educational
+          content, all for free.
+        </Text>
+      </Container>
+    </Card>
   );
 }
 

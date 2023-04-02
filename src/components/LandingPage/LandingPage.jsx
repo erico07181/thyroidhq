@@ -1,8 +1,10 @@
-import { Card, Container, Text, Row, Col } from "@nextui-org/react";
+import { Card, Container, Text, Row, Col, Button } from "@nextui-org/react";
 import Logo from "../../assets/thq-logo-no_background.svg";
-import Nav from "../Navbar/Nav";
-import Waitlist from "../Waitlist/Waitlist";
-import ContactUs from "../ContactUs/ContactUs";
+import Insta from "../../assets/icons8-instagram.svg";
+import Facebook from "../../assets/icons8-facebook.svg";
+import Nav from "../Navbar/Nav.jsx";
+import Waitlist from "../Waitlist/Waitlist.jsx";
+import Footer from "../Footer/Footer";
 
 export default function LandingPage() {
   return (
@@ -226,7 +228,7 @@ export default function LandingPage() {
                 }}
               >
                 <Text
-                  h2
+                  h3
                   css={{
                     color: "#666666",
                     fontWeight: "400",
@@ -234,28 +236,75 @@ export default function LandingPage() {
                     alignContent: "center",
                     display: "block",
                     alignItems: "center",
-                    textAlign: "center",
                     wordWrap: "break-word",
                     lineHeight: "1.5em",
                   }}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                  eu turpis molestie, dictum est a, mattis tellus. Sed
-                  dignissim, metus nec fringilla accumsan, risus sem
-                  sollicitudin lacus, ut interdum tellus elit sed risus.
-                  Maecenas eget condimentum velit, sit amet feugiat lectus.
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos. Praesent auctor purus luctus
-                  enim egestas, ac scelerisque ante pulvinar. Donec ut rhoncus
-                  ex. Suspendisse ac rhoncus nisl, eu tempor urna. Curabitur vel
-                  bibendum lorem. Morbi convallis convallis diam sit
+                  At ThyroidHQ, we understand the struggles of living with
+                  hypothyroidism all too well.
+                </Text>
+                <Text css={{ color: "white" }}>HHHH</Text>
+                <Text
+                  h3
+                  css={{
+                    color: "#666666",
+                    fontWeight: "400",
+                    justifyContent: "center",
+                    alignContent: "center",
+                    display: "block",
+                    alignItems: "center",
+                    wordWrap: "break-word",
+                    lineHeight: "1.5em",
+                  }}
+                >
+                  Our company was founded by three friends– all personally
+                  affected by the condition– who are dedicated to making
+                  personal healthcare cheaper, easier, and more accessible.
+                </Text>
+                <Text css={{ color: "white" }}>HHHH</Text>
+                <Text
+                  h3
+                  css={{
+                    color: "#666666",
+                    fontWeight: "400",
+                    justifyContent: "center",
+                    alignContent: "center",
+                    display: "block",
+                    alignItems: "center",
+                    wordWrap: "break-word",
+                    lineHeight: "1.5em",
+                  }}
+                >
+                  Founded in 2020 by three co-founders, Our team is constantly
+                  searching for new ways to improve the current, outdated
+                  thyroid healthcare experience, which is why we’ll be proud to
+                  expand our services in the near future to deliver personalized
+                  hypothyroidism treatment.
+                </Text>
+                <Text css={{ color: "white" }}>HHHH</Text>
+                <Text
+                  h3
+                  css={{
+                    color: "#666666",
+                    fontWeight: "400",
+                    justifyContent: "center",
+                    alignContent: "center",
+                    display: "block",
+                    alignItems: "center",
+                    wordWrap: "break-word",
+                    lineHeight: "1.5em",
+                  }}
+                >
+                  Together, we hope to help you take better control of your
+                  hypothyroidism and pave the way for a healthier and happier
+                  life.
                 </Text>
               </Container>
             </Container>
 
             <Container
               css={{
-                minHeight: "100vh",
+                minHeight: "70vh",
                 justifyContent: "center",
                 alignContent: "center",
                 display: "flex",
@@ -271,9 +320,9 @@ export default function LandingPage() {
                   justifyContent: "center",
                   background: "#D9D9D9",
                   width: "54vh",
-                  height: "90vh",
+                  height: "80vh",
                   boxShadow: "0px",
-                  borderRadius: "0",
+                  borderRadius: "10",
                 }}
               ></Card>
             </Container>
@@ -319,11 +368,11 @@ export default function LandingPage() {
 
           <Container
             css={{
-              maxWidth: "30%",
+              maxWidth: "40%",
               justifyContent: "center",
               alignContent: "center",
-              display: "flex",
               paddingTop: "2vw",
+              height: "40vh",
             }}
           >
             <Text
@@ -336,15 +385,114 @@ export default function LandingPage() {
                 textAlign: "center",
                 fontWeight: "700",
                 lineHeight: "81px",
+                width: "100%",
               }}
             >
               Ready to learn more about your thyroid?
             </Text>
+            <Button css={{ background: "#B65A60", width: "35vw" }}>
+              <Text
+                css={{
+                  fontFamily: "Euclid Circular B",
+                  fontStyle: "normal",
+                  display: "flex",
+                  fontWeight: "600",
+                  maxWidth: "100%",
+                  color: "white",
+                }}
+              >
+                Order Your Test Kit
+              </Text>
+            </Button>
           </Container>
         </Card>
       </Container>
-      <Waitlist />
-      <ContactUs />
+      <Container css={{ paddingBottom: "1vw" }}>
+        <Container
+          css={{
+            maxWidth: "100%",
+            justifyContent: "center",
+            alignContent: "center",
+            display: "flex",
+            paddingTop: "5vw",
+          }}
+        >
+          <Text
+            h1
+            css={{
+              fontStyle: "normal",
+              display: "flex",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
+            Follow Us
+          </Text>
+        </Container>
+        <Container
+          css={{
+            maxWidth: "100%",
+            justifyContent: "center",
+            alignContent: "center",
+            display: "flex",
+            paddingTop: "1.5vh",
+          }}
+        >
+          <Card
+            css={{
+              background: "#333333",
+              width: "10vh",
+              height: "1vh",
+              justifyContent: "center",
+              alignContent: "center",
+            }}
+          >
+            <Card.Body />
+          </Card>
+          <Container
+            css={{
+              maxWidth: "100%",
+              justifyContent: "center",
+              alignContent: "center",
+              display: "flex",
+              paddingTop: "2vh",
+              flexDirection: "row",
+            }}
+          >
+            <a href="https://www.instagram.com/thyroidhq/" target="_blank">
+              <img
+                src={Insta}
+                style={{
+                  display: "flex",
+                  height: "20vh",
+                }}
+              />
+            </a>
+
+            <img
+              src={Facebook}
+              style={{
+                display: "flex",
+                height: "20vh",
+              }}
+            ></img>
+          </Container>
+        </Container>
+      </Container>
+      <Container
+        fluid
+        css={{
+          maxWidth: "100%",
+          justifyContent: "center",
+          alignContent: "center",
+          display: "flex",
+          flexDirection: "column",
+          paddingBottom: "10vh",
+        }}
+      >
+        <Waitlist />
+      </Container>
+      <Footer />
     </div>
   );
 }
